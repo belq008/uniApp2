@@ -1,0 +1,83 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "25.0.0"
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    defaultConfig {
+        applicationId "com.xinyusoft.xinyudigg"
+        minSdkVersion 21
+        targetSdkVersion 23
+        versionCode 18
+        versionName "1.8"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "umeng"]
+    }
+    signingConfigs {
+        release {
+            storeFile file('D:\\keystore\\digg\\digg.jks')
+            storePassword "xinyu1220"
+            keyAlias "digg"
+            keyPassword "xinyu1220"
+        }
+    }
+
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+        release {
+            signingConfig signingConfigs.release
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outFile = output.outputFile
+                    if (outFile != null && outFile.name.endsWith(".apk")) {
+                        def fileName = "${variant.productFlavors[0].name}" + "_Digg.apk"
+                        output.outputFile = new File(outFile.parent, fileName);
+                    }
+                }
+
+            }
+        }
+    }
+
+
+    productFlavors {
+        huawei {}
+        xiaomi {}
+        wandoujia {}
+        baidu {}
+        yingyongbao {}
+        c360 {}
+        productFlavors.all { flavor ->
+            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+    }
+
+
+}
+
+repositories {
+    flatDir {
+        dirs '../XshellLib/libs', 'libs'
+    }
+}
+
+dependencies {
+    compile project(':XshellLib')
+    compile 'com.githang:status-bar-compat:latest.integration'
+
+}

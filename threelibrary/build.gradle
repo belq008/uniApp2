@@ -1,0 +1,22 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+//        minSdkVersion 21
+//        targetSdkVersion 23
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+}
+
+dependencies {
+
+    compile files('libs/bdasr_V3_20171108_9800a2a.jar')
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'org.greenrobot:eventbus:3.1.1'
+
+}

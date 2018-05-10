@@ -1,0 +1,9 @@
+include ':XshellLib',
+        ':threelibrary',
+        ':FragmentTabLibrary',
+        ':CordovaLib',
+//        ':testlcs-cordova',
+        ':Dig'
+//        ':HanqMom',
+//        ':DigTest',
+

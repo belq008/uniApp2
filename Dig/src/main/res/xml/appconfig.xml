@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<config>
+    <!--Android html的更新的时间-->
+    <html-update-time time="201804202009" />
+    <wxapp-id id="wx25eb1dc94a1234cf" />
+    <wxapp-secret secret="5f2db743c9c4d1d6a8c2ab0ae50a8d79" />
+    <!-- 主界面的url的地址-->
+    <class-home path="com.TestActivity" />
+
+    <app>
+        <!--Android app的更新的时间-->
+        <app-update-time time="201804092030" />
+        <!-- 在xversion中，html5项目的名字-->
+        <xversion-html-name value="Digg" />
+        <xversion-app-name value="ifop_Digg" />
+        <!-- 在xversion中，上传Androidapk包，那个apk的名字-->
+        <xversion-apk-name value="digg.apk" />
+        <!-- xversion查询是否要更新的url接口-->
+        <!--   正式环境-->
+        <xversion-update-url value="http://121.40.148.145/ESBServlet?command=vms.getChangedListAction" />
+        <xversion-download-url value="http://121.40.148.145/" />
+        <xversion-update-content-url value="http://121.40.148.145/ESBServlet?command=vms.getAccessListAction" />
+    </app>
+</config>
