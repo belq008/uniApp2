@@ -43,7 +43,6 @@ public class GtbApp extends com.xshell.xshelllib.application.AppContext {
             @Override
             public void onSuccess(String deviceToken) {
                 //注册成功会返回device token
-                Log.e("amtf", "DigTest deviceToken:" + deviceToken);
                 PreferenceUtil.getInstance().saveDeviceToken(deviceToken);
             }
 

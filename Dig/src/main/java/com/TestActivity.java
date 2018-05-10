@@ -65,10 +65,7 @@ public class TestActivity extends XinyuHomeActivity {
         mRegReceiver();
         loadUrl(url);
         new UiHelper(this).start();
-        // appView.getView().setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         RequestWebViewURL.getInstance(mContext).requestURl(appView);
-
-        //PermissionUtil.getInstance(this).checkPermission(mContext);
 
 
     }
@@ -146,7 +143,6 @@ public class TestActivity extends XinyuHomeActivity {
             Log.e("amtf", "进入到testAActivity 的Event");
             if (!TextUtils.isEmpty(event.msg)) {
                 if (event.msg.equals("dark")) {
-                    // TextBarColorUtil.StatusBarLightMode(mContext);
                     TextBarColorUtil.setDarkStatusIcon(mContext, true);
                 } else {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
