@@ -22,7 +22,7 @@ package com.xshell.xshelllib.tools.download;//package com.xinyusoft.xshell.tools
 //import com.lidroid.xutils.http.callback.RequestCallBack;
 //import com.xinyusoft.xshell.application.AppConstants;
 //import com.xinyusoft.xshell.ui.LoadingActivity;
-//import com.xinyusoft.xshell.utils.FileUtil;
+//import com.xinyusoft.xshell.utils.OfficeFileUtil;
 //import com.xinyusoft.xshell.utils.PreferenceUtil;
 //
 //public class AppDownload {
@@ -113,8 +113,8 @@ package com.xshell.xshelllib.tools.download;//package com.xinyusoft.xshell.tools
 //		mHandler.sendEmptyMessage(SHOW_MESSAGE);
 //		HttpUtils http = new HttpUtils();
 //		PreferenceUtil.getInstance().setDownAppDir(
-//				FileUtil.getInstance().getFilePathInSDCard(AppConstants.XINYUSOFT_CACHE, AppConstants.APP_APK_NAME));
-//		String file = FileUtil.getInstance().getFilePathInSDCard(AppConstants.XINYUSOFT_CACHE,
+//				OfficeFileUtil.getInstance().getFilePathInSDCard(AppConstants.XINYUSOFT_CACHE, AppConstants.APP_APK_NAME));
+//		String file = OfficeFileUtil.getInstance().getFilePathInSDCard(AppConstants.XINYUSOFT_CACHE,
 //				AppConstants.APP_APK_NAME);
 //		String url = configInfo.get("app_url_download");
 //		http.download(url, file, false, true, new RequestCallBack<File>() {

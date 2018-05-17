@@ -674,7 +674,7 @@ public class LoadingActivity extends Activity {
                         ZIPUtils.unzipTest(file.getAbsolutePath(), AppContext.CONTEXT.getFilesDir().getAbsolutePath());
                         PreferenceUtil.getInstance().setFileUpdateTime(time);// 设置上次更新时间（设置最新版本号）
                         // 修改所有的文件为只读权限 （zip下载不能单个的设置只读）
-                        // FileUtil.getInstance().setReadOnlyFiles(getFilesDir().getAbsolutePath());
+                        // OfficeFileUtil.getInstance().setReadOnlyFiles(getFilesDir().getAbsolutePath());
                         if (AppConfig.DEBUG)
                             Log.e("zzy", "downdoading Html5 success time=" + time);
                         if (AppConfig.WIRTE_SDCARD) {

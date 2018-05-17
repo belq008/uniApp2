@@ -12,6 +12,7 @@ import com.threelibrary.SpeechUtil;
 
 import com.xshell.xshelllib.application.AppConfig;
 import com.xshell.xshelllib.logutil.LogUtils;
+import com.xshell.xshelllib.officeFile.OfficeFileUtil;
 import com.xshell.xshelllib.utils.AppConsts;
 import com.xshell.xshelllib.utils.CalendarUtil;
 import com.xshell.xshelllib.utils.CommonUtil;
@@ -138,8 +139,22 @@ public class AppNativePlugin extends CordovaPlugin {
             }
 
             return true;
+        } else if ("openOffice".equals(action)) {
+            String param = args.getString(0);
+            openOnlineOfficeFile(param);
+            return true;
         }
         return false;
+    }
+
+    /**
+     * @param param 网络完整url链接
+     */
+    private void openOnlineOfficeFile(String param) {
+
+        OfficeFileUtil.getInstance().downloadFile(activity, "http://113.16.174.140:7512/ghzq_mall_webadmin/upload/23665018028438433.docx");
+
+
     }
 
 //    @Subscribe(threadMode = ThreadMode.MAIN)

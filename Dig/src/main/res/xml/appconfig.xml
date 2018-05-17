@@ -9,7 +9,7 @@
 
     <app>
         <!--Android app的更新的时间-->
-        <app-update-time time="201804092030" />
+        <app-update-time time="201904092030" />
         <!-- 在xversion中，html5项目的名字-->
         <xversion-html-name value="Digg" />
         <xversion-app-name value="ifop_Digg" />
